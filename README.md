@@ -1,4 +1,6 @@
-# demo app for golang
+# heroku-docker-demo
+
+A demo app of heroku-docker with golang
 
 ## Setup
 

@@ -1,6 +1,6 @@
 {
-  "name": "Demo App",
-  "description": "A demo app for heroku-docker",
+  "name": "heroku-docker-demo",
+  "description": "A demo app of heroku-docker with golang",
   "image": "heroku/go",
   "mount_dir": "bin",
   "addons": []
