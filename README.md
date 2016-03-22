@@ -22,8 +22,8 @@ https://devcenter.heroku.com/articles/docker
   https://getgb.io/docs/project/
 
 ## TODO
-- use $PORT from env in main.go
 
 ## DONE
+- use $PORT from env in main.go
 - Godep
   https://github.com/tools/godep

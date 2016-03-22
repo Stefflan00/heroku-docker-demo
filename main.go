@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -15,9 +16,13 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		panic("need a $PORT env variable")
+	}
+
 	http.HandleFunc("/", handler)
 
-	port := 8080
-	fmt.Printf("listening at %d ...\n", port)
-	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+	fmt.Printf("listening at :%s ...\n", port)
+	http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 }
