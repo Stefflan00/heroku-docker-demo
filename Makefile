@@ -1,4 +1,4 @@
-app-name=golangdemo
+app-name=heroku-docker-demo
 
 setup:
 	heroku apps:create ${app-name}

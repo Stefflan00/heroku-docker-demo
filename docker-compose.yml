@@ -1,6 +1,6 @@
 web:
   build: .
-  command: 'bash -c ''./demo'''
+  command: 'bash -c ''./heroku-docker-demo'''
   working_dir: /app/user/bin
   environment:
     PORT: 8080
@@ -9,10 +9,10 @@ web:
 shell:
   build: .
   command: bash
-  working_dir: /app/user/src/github.com/blindgaenger/demo
+  working_dir: /app/user/src/github.com/blindgaenger/heroku-docker-demo
   environment:
     PORT: 8080
   ports:
     - '9090:8080'
   volumes:
-    - '.:/app/user/src/github.com/blindgaenger/demo'
+    - '.:/app/user/src/github.com/blindgaenger/heroku-docker-demo'

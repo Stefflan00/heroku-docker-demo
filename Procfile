@@ -1,1 +1,1 @@
-web: /app/user/bin/demo
+web: /app/user/bin/heroku-docker-demo
