@@ -1,0 +1,18 @@
+web:
+  build: .
+  command: 'bash -c ''./demo'''
+  working_dir: /app/user/bin
+  environment:
+    PORT: 8080
+  ports:
+    - '9090:8080'
+shell:
+  build: .
+  command: bash
+  working_dir: /app/user/src/github.com/blindgaenger/demo
+  environment:
+    PORT: 8080
+  ports:
+    - '9090:8080'
+  volumes:
+    - '.:/app/user/src/github.com/blindgaenger/demo'

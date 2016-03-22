@@ -1,13 +1,18 @@
 image-name=demo-app
 
+setup:
+	heroku apps:create golangdemo
+	heroku docker:init
+
 build:
-	docker build --tag=${image-name} .
+	# godep save # needed to change "GoVersion": "go1.6beta2"
+	docker-compose build
 
 start:
-	docker run -it --rm -p 9090:8080 ${image-name}
+	docker-compose up web
 
 stop:
-	docker stop `docker ps --filter ancestor=${image-name} --format="{{.ID}}"`
+	docker-compose down
 
 ping:
 	curl -i ${DOCKER_URL}:9090/ping
