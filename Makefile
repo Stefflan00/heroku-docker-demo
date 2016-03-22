@@ -20,5 +20,8 @@ ping:
 deploy:
 	heroku docker:release
 
-open:
+prod_open:
 	heroku open
+
+prod_logs:
+	heroku logs --tail
