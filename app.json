@@ -2,6 +2,6 @@
   "name": "Demo App",
   "description": "A demo app for heroku-docker",
   "image": "heroku/go",
-  "mount_dir": "src/github.com/blindgaenger/heroku-docker-demo",
+  "mount_dir": "bin",
   "addons": []
 }
