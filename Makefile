@@ -1,7 +1,7 @@
-image-name=demo-app
+app-name=golangdemo
 
 setup:
-	heroku apps:create golangdemo
+	heroku apps:create ${app-name}
 	heroku docker:init
 
 build:
