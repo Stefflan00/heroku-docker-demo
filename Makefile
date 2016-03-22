@@ -16,3 +16,9 @@ stop:
 
 ping:
 	curl -i ${DOCKER_URL}:9090/ping
+
+deploy:
+	heroku docker:release
+
+open:
+	heroku open

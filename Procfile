@@ -1,1 +1,1 @@
-web: ./demo
+web: /app/user/bin/demo
